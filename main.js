@@ -26,6 +26,33 @@ function round_user(value) {
 
 }
 
+
+// Delta, calculate the difference between two numbers//
+function delta(a, b) {
+let answer = a - b
+return answer
+}
+
+
+//Slope of  a line//
+function slope(x1, y1, x2, y2) {
+    let slope = (y2 - y1) / (x2 - x1)
+    return slope
+}
+
+//average of two numbers//
+function avg(n1, n2) {
+ let avg = (n1 + n2) / 2
+ return avg
+}
+
+//rounding user value//
+function round_user(value) {
+    let decimal = Number(document.getElementById("rounding")* value)
+    return decimal
+}
+
+
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
 
