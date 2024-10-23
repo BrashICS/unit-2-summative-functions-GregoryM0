@@ -78,6 +78,16 @@ function rect_prism_volume() {
 }
 
 function rect_prism_area() {
+    let length = Number(document.getElementById("length").value);
+    let width = Number(document.getElementById("width").value);
+    let height = Number(document.getElementById("height").value);
+
+    let area = 2 *((width * length) + (height * length) + (height * width))
+    return area
+}
+
+
+function sphere_volume() {
 
 
 }
