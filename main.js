@@ -11,13 +11,13 @@
 /*** Event Listeners ***/
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
-document.getElementById("delta").addEventListener("click", delta);
+document.getElementById("rectangle_prism_volume").addEventListener("click", rect_prism_volume);
 
 /*** Functions ***/
 
 // Round to the nearest `decimals` number of decimals
 function round(value, decimals) {
-    return Math.round(value * 10**decimals) / 10**decimals;
+    return Math.round(value * 10**decimals) / 10**decimals
 }
 
 // Round to the user's number of decimals
@@ -28,7 +28,7 @@ function round_user(value) {
 }
 
 
-// Delta, calculate the difference between two numbers//
+// Delta, calculate the difference between two numbers
 function delta(a, b) {
 let answer = a - b 
 return answer
@@ -55,7 +55,7 @@ function round_user(value) {
 }
 
 
-
+//length of a line
 function length(x1, y1, x2, y2) {
     let answer = delta(x2, x1)**2
     let answer1 = delta(y2, y1)**2
@@ -65,7 +65,19 @@ function length(x1, y1, x2, y2) {
     return z
 }
 
+//volume of a rectangular prism
 function rect_prism_volume() {
+    //Numbers
+    let length = Number(document.getElementById("length").value);
+    let width = Number(document.getElementById("width").value);
+    let height = Number(document.getElementById("height").value);
+
+    //volume
+    let volume = length * width * height
+    return volume
+}
+
+function rect_prism_area() {
 
 
 }
