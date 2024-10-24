@@ -116,7 +116,8 @@ function slope1() {
     let x2 = Number(document.getElementById("x2").value);
     let y2 = Number(document.getElementById("y2").value);
     let answer = slope(x1, y1, x2, y2)
-    document.getElementById("answer1").textContent = answer;
+    let round = round_user(answer)
+    document.getElementById("answer1").textContent = round;
 }
 
 
@@ -127,8 +128,8 @@ function length1() {
     let x2 = Number(document.getElementById("x2").value);
     let y2 = Number(document.getElementById("y2").value);
     let answer = length(x1, y1, x2, y2)
-    document.getElementById("answer1").textContent = answer;
-
+    let round = round_user(answer)
+    document.getElementById("answer1").textContent = round;
 }
 
 
