@@ -12,6 +12,10 @@
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
 document.getElementById("rectangle_prism_volume").addEventListener("click", rect_prism_volume);
+document.getElementById("rectangle_prism_area").addEventListener("click", rect_prism_area);
+document.getElementById("sphere_volume").addEventListener("click", sphere_volume);
+document.getElementById("sphere_area").addEventListener("click", sphere_area);
+
 
 /*** Functions ***/
 
@@ -62,7 +66,7 @@ function length(x1, y1, x2, y2) {
     let x = Math.sqrt(answer)
     let y = (answer1)
     let z = x - y
-    return z
+    return z 
 }
 
 //volume of a rectangular prism
@@ -74,7 +78,7 @@ function rect_prism_volume() {
 
     //volume
     let volume = length * width * height
-    return volume
+    document.getElementById("answer").textContent = volume
 }
 
 function rect_prism_area() {
@@ -83,14 +87,30 @@ function rect_prism_area() {
     let height = Number(document.getElementById("height").value);
 
     let area = 2 *((width * length) + (height * length) + (height * width))
-    return area
+    document.getElementById("answer").textContent = area
 }
 
 
 function sphere_volume() {
+    let radius = Number(document.getElementById("radius").value);
 
+    let volume = 4/3 * Math.PI * (radius**3)
+    document.getElementById("answer").textContent = volume
+}
+
+
+
+function sphere_area() {
+    let radius = Number(document.getElementById("radius").value);
+    let volume = 4 * (Math.PI * (radius**2))
+    document.getElementById("answer").textContent = volume
+}
+
+function length1() {
 
 }
+
+
 
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
