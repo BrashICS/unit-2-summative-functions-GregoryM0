@@ -196,6 +196,6 @@ function vertex() {
     let newy = round_user(y)
     //pint/output//
     console.log(newx, newy);
-    document.getElementById("answer2").textContent = `The Vertex is '(${newx}, ${newy})'`
+    document.getElementById("answer2").textContent = `The Vertex is (${newx}, ${newy})`
 }
 
