@@ -96,7 +96,8 @@ function sphere_volume() {
     let radius = Number(document.getElementById("radius").value);
 
     let volume = 4/3 * Math.PI * (radius**3)
-    document.getElementById("answer").textContent = volume
+    let newvol = round_user(volume)
+    document.getElementById("answer").textContent = newvol
 }
 
 
@@ -104,7 +105,8 @@ function sphere_volume() {
 function sphere_area() {
     let radius = Number(document.getElementById("radius").value);
     let volume = 4 * (Math.PI * (radius**2))
-    document.getElementById("answer").textContent = volume
+    let newvol = round_user(volume)
+    document.getElementById("answer").textContent = newvol
 }
 
 //X1, Y1, X2, Y2//
@@ -150,14 +152,10 @@ function midpoint() {
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
      let y = (a * x ** 2 + (b * x) + c);
-    return y
+     return y
 }
 
 //or//
-
-function y_quad(a, b, c, x) {
-    return -b / (2 * a);
-}
 
 
 
@@ -191,10 +189,13 @@ function vertex() {
     let a = Number(document.getElementById("a").value);
     let b = Number(document.getElementById("b").value);
     let c = Number(document.getElementById("c").value);
-    let x = Number(document.getElementById("x").value);
-    let x1 = y_quad(a, b); 
-    let y = (a * x ** 2 + (b * x) + c); 
-    console.log(x1,y)
-    document.getElementById("answer2").textContent = `The Vertex is ${x1}, ${y}`
+    let x1 = -b / (2 * a);
+    let y = y_quad (a, b, c, x1);
+    //Rounding of the answers/vertex points//
+    let newx = round_user(x1)
+    let newy = round_user(y)
+    //pint/output//
+    console.log(newx, newy);
+    document.getElementById("answer2").textContent = `The Vertex is '(${newx}, ${newy})'`
 }
 
